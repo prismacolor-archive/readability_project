@@ -14,8 +14,7 @@ sample8 = "Dr. Beverly Crusher is the greatest! She is so caring and compassiona
 def main():
     user_text = sample8
 
-    final_text = clean_text(user_text)
-    readability_score = get_readability_score(final_text)
+    readability_score = get_readability_score(user_text)
     print(readability_score)
 
 
@@ -42,9 +41,8 @@ def clean_text(text):
 
 
 def get_readability_score(text):
-    sentences = text.split(".")
-
-    print(sentences)
+    final_text = clean_text(text)
+    sentences = final_text.split(".")
 
     try:
         results = readability.getmeasures(sentences, lang='en')
