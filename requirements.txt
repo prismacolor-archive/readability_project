@@ -21,3 +21,5 @@ toml==0.10.2
 urllib3==1.26.2
 vaderSentiment==3.3.2
 wrapt==1.11.1
+
+readability~=0.3.1
