@@ -90,6 +90,7 @@ def get_readability_score(text):
     try:
         results = readability.getmeasures(sentences, lang='en')
         final_score = results['readability grades']['FleschReadingEase']
+        final_score = round(final_score, 3)
     except Exception as e:
         error_msg = "Unable to return readability score. Please review user text."
         logger.debug(e)
